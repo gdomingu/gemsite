@@ -9,7 +9,7 @@ get "/" do
 	erb :index
 end				
 
-get "/movies" do
+post "/movies" do
 
 	@name = params[:name]
 	unless @name.nil?
@@ -30,7 +30,7 @@ get "/movies" do
 	#This is where the movie image search is. 
 
 
-get "/images" do
+post "/images" do
 
 	@keyword = params[:keyword]
 	unless @keyword.nil?
@@ -54,7 +54,7 @@ get "/randimg" do
 
 	erb :randimg
 end
-get "/stocks" do
+post "/stocks" do
 	@symbol = params[:symbol]
 	unless @symbol.nil?
 		begin
