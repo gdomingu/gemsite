@@ -18,11 +18,12 @@ get "/movies" do
 			@moviedirector = Movies.find_by_title(@name).director
 			@movierating = Movies.find_by_title(@name).rating
 			@movieyear = Movies.find_by_title(@name).year
+			suckr = ImageSuckr::GoogleSuckr.new
+			@img = suckr.get_image_url({"q" => @name})
+			erb :movies
 		rescue
 			erb :index
 			end
-		else
-			erb :index
 		end
 	end	
 	#@movieimg = suckr.get_image_url({"q" => @name})
@@ -57,6 +58,8 @@ get "/stocks" do
 			@stocklast = StockQuote::Stock.quote(@symbol).last
 			@stockhigh = StockQuote::Stock.quote(@symbol).high
 			@stocklow = StockQuote::Stock.quote(@symbol).low
+			suckr = ImageSuckr::GoogleSuckr.new
+			@img = suckr.get_image_url({"q" => @symbol})
 			erb :stocks
 		rescue
 			erb :index
