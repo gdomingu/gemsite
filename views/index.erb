@@ -1,0 +1,28 @@
+
+	<h2> Welcome to my site using gems. Use the forms below to use the different apps.</h2>
+
+	<div class="movies">
+		<form action="/movies" method="get">
+			<input type="text" name="name">
+			<button>Search for movie by name</button>
+		</form>
+	</div>
+
+	<div class="images">
+		<form action="/images" method="get">
+			<input type="text" name="keyword">
+			<button>Search for image by keyword </button>
+		</form>
+	<!-- Here is where the random image button will go-->
+		<form action="/randimg" method="get">
+			<input type="hidden" name="random">
+			<button>Click me for a random image </button>
+		</form>
+	</div>
+
+	<div class="stocks">
+		<form action="/stocks" method="get">
+			<input type="text" name="symbol">
+			<button>Search for stock info by ticker symbol</button>
+		</form>
+	</div>

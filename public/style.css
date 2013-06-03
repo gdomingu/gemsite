@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: gold;
+}
+h1 {
+
+}
+#content {
+	height: 700px;
+	width: 700px;
+	margin: 0 auto;
+}
+img {
+	display: block;
+	height: 500px;
+	width:  500px;
+	overflow: hidden;
+	margin: 0 auto;
+	border: 5px solid;
+
+
+}
+body {
+	margin: 0;
+	height: auto;
+}
+
