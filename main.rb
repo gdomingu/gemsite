@@ -33,10 +33,15 @@ get "/movies" do
 get "/images" do
 
 	@keyword = params[:keyword]
-	suckr = ImageSuckr::GoogleSuckr.new
-	@img = suckr.get_image_url({"q" => @keyword})
-
-	erb :images
+	unless @keyword.nil?
+		begin
+			suckr = ImageSuckr::GoogleSuckr.new
+			@img = suckr.get_image_url({"q" => @keyword})
+			erb :images
+		rescue
+			erb :index
+			end	
+		end
 end
 
 get "/randimg" do
