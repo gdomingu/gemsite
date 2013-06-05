@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="stylesheet" type="text/css" href="/style.css">
+ <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+
+
+		  <script type="text/javascript" src="/bootstrap/js/jquery-1.10.1.js"></script>
+		  <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+		  <script type="text/javascript" src="/bootstrap/js/script.js"></script>
 	</head>
 	<title> Sinatra Project</title>
-	<div id="wrapper">
+	<div id="wrapper" class="row-fluid">
 		<body>
-			<div id="content">
-				<div id="topnav"> 
+			<div id="content" class="span8 offset2">
+				
 					
 					
-					<button><a href="/">Return to home</a> </button>
-					</form>
-				<div>
-				<h1>This is my first project using Sinatra and gems.</h1>
+					<a href="/"><button class="row-fluid btn btn-primary">Return to home</button>
+					</form></a>
+			
+				<h1 class="span11 offset1">This is my first project using Sinatra and gems.</h1>
 				<%= yield %>
-				<footer> Made with love by Gabe during WDI Summer 2013</footer>
+				<div class="clear"></div>
+				<footer class="span7 offset3"> Made with love by Gabe during WDI Summer 2013<br>
+												with Twitter Bootstrap</footer>
 			</div>
 		</body>
 	</div>

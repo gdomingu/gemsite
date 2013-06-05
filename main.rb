@@ -26,8 +26,7 @@ post "/movies" do
 			end
 		end
 	end	
-	#@movieimg = suckr.get_image_url({"q" => @name})
-	#This is where the movie image search is. 
+
 
 
 post "/images" do

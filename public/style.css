@@ -1,28 +1,20 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: gold;
+    background-color: black;
 }
 h1 {
 
 }
 #content {
-	height: 700px;
-	width: 700px;
-	margin: 0 auto;
-}
-img {
-	display: block;
-	height: 500px;
-	width:  500px;
-	overflow: hidden;
-	margin: 0 auto;
-	border: 5px solid;
-
-
+	background-color: grey;
 }
 body {
 	margin: 0;
 	height: auto;
 }
 
+footer{
+	margin-top: 50px;
+
+}

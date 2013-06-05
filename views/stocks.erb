@@ -1,10 +1,56 @@
-<h2> This is the stock app </h2>
 
-<h2> Here is the stock information for <%= @company %> </h2>
+	<h2 class="span11 offset1">Select a tab!</h2>
 
-<p> Symbol: <%= @stocksym %> </p>
-<p> The high of today is <%= @stockhigh %> .</p>
-<p> The low of today is <%= @stocklow %> . </p>
-<p> The today it ended at <%= @stocklast %> . </p>
 
-<img src="<%= @img %>" />
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+	<ul class="nav nav-tabs">
+		 <li><a href="#tab1" data-toggle="tab">Movies</a></li>
+		 <li><a href="#tab2" data-toggle="tab">Images</a></li>
+		 <li class="active"><a href="#tab3" data-toggle="tab">Stocks</a></li>
+	</ul> 
+				 
+	<div class="tab-content">
+		<!-- First tab -->
+		<div class="tab-pane" id="tab1">
+			 <div class="movies">
+				<form action="/movies" method="post">
+					<input type="text" name="name" placeholder="Enter movie name...">
+					<div class="clear"></div>
+					<button class="btn">Search movies</button>
+				</form>
+			 </div>
+		</div>
+		<!-- Second tab -->    
+    	<div class="tab-pane" id="tab2">
+      		<div class="images">
+				<form action="/images" method="post">
+					<input type="text" name="keyword" placeholder="Enter keyword...">
+						<div class="clear"></div>
+						<button class="btn">Search images</button>
+				</form>
+    		</div>
+ 			<!-- Random Image -->
+		  	<form action="/randimg" method="get">
+				<input type="hidden" name="random">
+				<button class="btn">Random Image </button>
+			</form>
+		</div>
+   		<!--Third Tab-->
+  		<div class="tab-pane active" id="tab3">
+			<div class="stocks">
+				<form action="/stocks" method="post">
+					<input type="text" name="symbol" placeholder="Enter a ticker symbol...">
+					<div class="clear"></div>
+					<button class="btn">Search stock info</button>
+				</form>
+					<h2> Here is the stock information for <%= @company %> </h2>
+					<p> Symbol: <%= @stocksym %> </p>
+					<p> The high of today is <%= @stockhigh %> .</p>
+					<p> The low of today is <%= @stocklow %> . </p>
+					<p> The today it ended at <%= @stocklast %> . </p>
+
+					<img src="<%= @img %>" class="img-polariod" class="span11" alt="Picture of <%= @company%>"/>
+			</div>
+ 		</div>
+ 	</div>	<!-- End tab-conent-->
+</div> <!-- End tabbable-->
